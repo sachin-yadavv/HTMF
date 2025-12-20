@@ -2,8 +2,8 @@
 
 HTMF (Hackathon Teammate Finder) is a web platform designed to help students find suitable teammates for hackathons based on skills, interests, and experience. It enables collaboration across campuses and simplifies team formation.
 
-🌐 **Live Website:** https://htmf-eight.vercel.app/
-📁 **GitHub Repository:** https://github.com/sachin-yadavv/HTMF
+- 🌐 **Live Website:** https://htmf-eight.vercel.app/
+- 📁 **GitHub Repository:** https://github.com/sachin-yadavv/HTMF
 
 ---
 

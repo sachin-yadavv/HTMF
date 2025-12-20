@@ -1,25 +1,24 @@
 // src/pages/HomePage.jsx
 import React from "react";
-import DecryptedText from '../components/DecryptedText.jsx';
-import LetterGlitch from '../components/LetterGlitch';
+import DecryptedText from "../components/DecryptedText.jsx";
+import LetterGlitch from "../components/LetterGlitch";
 import Squares from "../components/Squares.jsx";
-
-
 
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-[#fffdf7] text-gray-800">
       {/* Header */}
-      
 
       {/* Hero Section */}
       <section
         id="home"
         className="relative bg-cover bg-center opacity-90"
-        style={{ backgroundImage: "url('https://images.squarespace-cdn.com/content/v1/5e6542d2ae16460bb741a9eb/1603318636443-A846ACUKNYUBA0RPLJ94/marvin-meyer-SYTO3xs06fU-unsplash.jpg?format=2500w')" }}
+        style={{
+          backgroundImage:
+            "url('https://images.squarespace-cdn.com/content/v1/5e6542d2ae16460bb741a9eb/1603318636443-A846ACUKNYUBA0RPLJ94/marvin-meyer-SYTO3xs06fU-unsplash.jpg?format=2500w')",
+        }}
       >
-        <div className="absolute inset-0 z-0">
-        </div>
+        <div className="absolute inset-0 z-0"></div>
         <div className="relative z-10 container mx-auto py-36 text-center">
           <div className="text-4xl font-bold text-black">
             <DecryptedText
@@ -27,10 +26,10 @@ const HomePage = () => {
               speed={100}
               maxIterations={20}
               useOriginalCharsOnly={true}
-              sequential= "true"
+              sequential="true"
               animateOn="view"
               revealDirection="start"
-            />          
+            />
           </div>
           <p className="mt-4 text-xl text-black">
             Connect with innovators and build your dream team today.
@@ -43,13 +42,13 @@ const HomePage = () => {
           </a>
           <br />
           <br />
-          <a href="https://github.com/ShubhamY90/HTMF.git"
+          <a
+            href="https://github.com/sachin-yadavv/HTMF.git"
             className="text-black text-2xl font-medium underline hover:text-green-500 transition my-4"
-        >
+          >
             Repository Link (GitHub)
-        </a>
+          </a>
         </div>
-        
       </section>
 
       {/* Features Section */}
@@ -64,22 +63,23 @@ const HomePage = () => {
           </div>
           <div className="bg-white p-6 rounded shadow hover:shadow-xl transition duration-300">
             <h3 className="text-2xl font-bold mb-4">Collaborate</h3>
-            <p>
-              Engage in real-time discussions and collaborate seamlessly.
-            </p>
+            <p>Engage in real-time discussions and collaborate seamlessly.</p>
           </div>
           <div className="bg-white p-6 rounded shadow hover:shadow-xl transition duration-300">
             <h3 className="text-2xl font-bold mb-4">Join Events</h3>
-            <p>
-              Participate in hackathons and events tailored for you.
-            </p>
+            <p>Participate in hackathons and events tailored for you.</p>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="container mx-auto py-12 bg-white rounded-lg shadow-lg px-8">
-        <h2 className="text-3xl font-bold text-center mb-6">About Our Platform</h2>
+      <section
+        id="about"
+        className="container mx-auto py-12 bg-white rounded-lg shadow-lg px-8"
+      >
+        <h2 className="text-3xl font-bold text-center mb-6">
+          About Our Platform
+        </h2>
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="md:w-1/2">
             <img
@@ -90,11 +90,13 @@ const HomePage = () => {
           </div>
           <div className="md:w-1/2 text-lg text-gray-700">
             <p className="mb-4">
-              We are dedicated to connecting you with the perfect hackathon team.
-              Our platform makes it easy for innovators, designers, and developers to collaborate and bring great ideas to life.
+              We are dedicated to connecting you with the perfect hackathon
+              team. Our platform makes it easy for innovators, designers, and
+              developers to collaborate and bring great ideas to life.
             </p>
             <p className="mb-4">
-              Discover talent, join events, and collaborate seamlessly—all in one place.
+              Discover talent, join events, and collaborate seamlessly—all in
+              one place.
             </p>
             <a
               href="#"
@@ -107,7 +109,6 @@ const HomePage = () => {
       </section>
 
       {/* Footer Section */}
-      
     </div>
   );
 };

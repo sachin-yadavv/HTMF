@@ -1,6 +1,6 @@
 // src/pages/FAQs.jsx
 import React, { useState } from 'react';
-import { sendContactNotification } from '../context/firebase/notifications';
+// import { sendContactNotification } from '../context/firebase/notifications';
 
 const FAQs = () => {
   // State to manage the contact form.
@@ -17,18 +17,43 @@ const FAQs = () => {
   };
 
   // Handle form submission.
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     await sendContactNotification(contactForm);
+  //     setSubmitted(true);
+  //     // Optionally, clear the form:
+  //     setContactForm({ name: '', email: '', message: '' });
+  //   } catch (error) {
+  //     console.error("Error sending contact form:", error);
+  //     alert("There was an error sending your message. Please try again.");
+  //   }
+  // };
+
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await sendContactNotification(contactForm);
+  e.preventDefault();
+
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(contactForm),
+    });
+
+    if (response.ok) {
       setSubmitted(true);
-      // Optionally, clear the form:
-      setContactForm({ name: '', email: '', message: '' });
-    } catch (error) {
-      console.error("Error sending contact form:", error);
-      alert("There was an error sending your message. Please try again.");
+      setContactForm({ name: "", email: "", message: "" });
+    } else {
+      alert("Failed to send message");
     }
-  };
+  } catch (error) {
+    console.error("Error sending contact form:", error);
+    alert("Server error. Please try again.");
+  }
+};
+
 
   return (
     <div className="min-h-screen pt-20 bg-gray-100">
